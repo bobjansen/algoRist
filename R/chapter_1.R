@@ -3,7 +3,7 @@ to_chars <- function(str) {
 }
 
 #' Check if a string has all unique characters, vectorized
-#' @param str The string to check
+#' @param strs The string to check
 #' @export
 unique_characters <- function(strs) {
   n <- length(strs)
@@ -13,6 +13,25 @@ unique_characters <- function(strs) {
   } else {
     vapply(sapply(chars, unique), length, integer(1L)) == nchar(strs)
   }
+}
+
+#' Check if a vector of strings has distinct entries
+#'
+#' A variation of \code{unique_characters()} as it is in the book using a vector
+#' of strings to be checked instead of characters and using a dictionary instead
+#' of \code{unique()}.
+#' @param strs The strings to check
+#' @export
+unique_strings <- function(strs) {
+  dict <- recollections::dictionary()
+  for (str in strs) {
+    if (is.null(recollections::getValue(dict, str))) {
+      recollections::setValue(dict, str, TRUE)
+    } else {
+      return(FALSE)
+    }
+  }
+  TRUE
 }
 
 #' Check if a string is a permutation of the other, vectorized

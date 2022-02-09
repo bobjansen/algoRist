@@ -7,7 +7,7 @@
 unique_characters(strs)
 }
 \arguments{
-\item{strs}{The strings to check}
+\item{strs}{The string to check}
 }
 \description{
 Check if a string has all unique characters, vectorized

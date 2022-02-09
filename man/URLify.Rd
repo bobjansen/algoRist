@@ -2,7 +2,7 @@
 % Please edit documentation in R/chapter_1.R
 \name{URLify}
 \alias{URLify}
-\title{Replace every space with '%20', vectorized}
+\title{Replace every space with '\%20', vectorized}
 \usage{
 URLify(str)
 }

@@ -21,6 +21,7 @@ unique_characters <- function(strs) {
 #' of strings to be checked instead of characters and using a dictionary instead
 #' of \code{unique()}.
 #' @param strs The strings to check
+#' @import recollections
 #' @export
 unique_strings <- function(strs) {
   dict <- recollections::dictionary()
@@ -45,7 +46,7 @@ is_permutation <- function(str1, str2) {
     sapply(lapply(chars2, sort), paste0, collapse = '')
 }
 
-#' Replace every space with '%20', vectorized
+#' Replace every space with '\%20', vectorized
 #'
 #' This solution is not in spirit of the exercise, R doesn't give this level of
 #' control and I don't believe it should.
@@ -71,6 +72,8 @@ palindrome_permutation <- function(strs) {
 #' Check whether the Levenshtein distance is <= 1L
 #'
 #' Based on https://codereview.stackexchange.com/a/178993/172577
+#' @param left The 'left' word to check.
+#' @param right The 'right' word to check.
 #' @export
 one_away <- function(left, right) {
   lengthLeft <- nchar(left)

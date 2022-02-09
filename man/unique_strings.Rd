@@ -10,5 +10,7 @@ unique_strings(strs)
 \item{strs}{The strings to check}
 }
 \description{
-A variation of unique_characters as it was in the book
+A variation of \code{unique_characters()} as it is in the book using a vector
+of strings to be checked instead of characters and using a dictionary instead
+of \code{unique()}.
 }

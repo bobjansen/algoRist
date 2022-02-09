@@ -6,6 +6,11 @@
 \usage{
 one_away(left, right)
 }
+\arguments{
+\item{left}{The 'left' word to check.}
+
+\item{right}{The 'right' word to check.}
+}
 \description{
 Based on https://codereview.stackexchange.com/a/178993/172577
 }

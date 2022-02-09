@@ -1,12 +1,13 @@
 Package: algoRist
 Type: Package
-Title: Solve toy problems
+Title: Solve Toy Problems
 Version: 0.1.0
 Author: Bob Jansen
 Maintainer: Bob Jansen <bob.jansen@hey.com>
 Description: Solve algorithmic problems using base R and advanced data
     structures not in base R.
-License: MIT
+Depends: R (>= 4.1), recollections
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: tinytest
